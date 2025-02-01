@@ -31,4 +31,17 @@ public class TrackTest
 
         Assert.AreEqual(1000, track.GetTotalLenght);
     }
+    [TestMethod]
+    public void ItShouldReturnMaxSpeed_GivenMultipleSections()
+    {
+        Section
+          startSection = new(50, 300),
+          middleSection = new(70, 500),
+          lastSection = new(60, 200);
+        List<Section> trackList = [startSection, middleSection, lastSection];
+
+        Track track = new(trackList);
+
+        Assert.AreEqual(70, track.GetMaxSpeed);
+    }
 }
