@@ -44,4 +44,11 @@ public class TrackTest
 
         Assert.AreEqual(70, track.GetMaxSpeed);
     }
+    [TestMethod]
+    [ExpectedException(typeof(ArgumentNullException), "Sections cant be empty")]
+    public void ItShouldThrowException_GivenEmptySectionList()
+    {
+        List<Section> sectionList = [];
+        Track track = new(sectionList);
+    }
 }
