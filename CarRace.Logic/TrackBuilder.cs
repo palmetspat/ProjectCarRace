@@ -8,5 +8,9 @@ namespace CarRace.Logic
 {
     public class TrackBuilder
     {
+        public void ItShouldBuildAConnectedTrack_GivenSectionInformation()
+        {
+       
+        }
     }
 }
