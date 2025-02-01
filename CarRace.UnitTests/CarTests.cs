@@ -15,7 +15,7 @@ public class CarTests
         int actualSpeed = car.Speed;
 
         // ASSERT - Überprüfen, ob die Geschwindigkeit 0 ist
-        Assert.AreEqual(0, actualSpeed); // Erwartung: Geschwindigkeit ist 0.
+        Assert.AreEqual(0, actualSpeed); // Erwartung: Geschwindigkeit ist 0..
     }
 
     [TestMethod]
