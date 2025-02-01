@@ -3,7 +3,7 @@ using CarRace.Logic;
 namespace CarRace.UnitTests;
 
 [TestClass]
-public class TrackTest
+public class TrackTests
 {
     [TestMethod]
     public void ItShouldSaveTheStartSectionOfATrack_GivenAnyNumbersOfSections()
