@@ -58,4 +58,17 @@ public class TrackTest
         List<Section>? sectionList = null;
         Track track = new(sectionList);
     }
+    [TestMethod]
+    public void ItShouldConnectTheLastSegmentToTheFirst_GivenAnAdditionalParameterForALoopedTrack()
+    {
+        Section
+          startSection = new(50, 300),
+          middleSection = new(70, 500),
+          lastSection = new(60, 200);
+        List<Section> trackList = [startSection, middleSection, lastSection];
+
+        Track track = new(trackList, trackShallLoop: true);
+
+        Assert.AreEqual(startSection, lastSection.NextSection);
+    }
 }
