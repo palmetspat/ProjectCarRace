@@ -24,6 +24,7 @@ namespace CarRace.Logic
         }
         #endregion constructors
 
+        #region methods
         public void AddAfterMe(Section section)
         {
             Section? tmp = NextSection;
@@ -46,5 +47,6 @@ namespace CarRace.Logic
             }
             section.NextSection = this;
         }
+        #endregion methods
     }
 }

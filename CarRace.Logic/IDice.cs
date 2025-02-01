@@ -9,11 +9,9 @@ namespace CarRace.Logic
     // Interface für einen Würfel (Dice) mit den grundlegenden Methoden und Eigenschaften.
     public interface IDice
     {
-
         #region properties
         public int Dots { get; }
         #endregion properties
-
         #region methods
         public void Roll();
         #endregion methods

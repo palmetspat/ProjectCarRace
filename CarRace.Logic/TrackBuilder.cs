@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-
 namespace CarRace.Logic
 {
     public class TrackBuilder
     {
+        #region fields
         private (int, int)[] _sectionInfos;
         private Track? _track;
+        #endregion fields
 
+        #region properties
         public Track? RaceTrack => _track;
+        #endregion properties
 
+        #region constructor
         public TrackBuilder((int, int)[] sectionInfos, bool trackShallLoop = false)
         {
             _sectionInfos = sectionInfos;
@@ -35,7 +38,6 @@ namespace CarRace.Logic
             _track = new Track(allSections, trackShallLoop);
 
         }
-
-
+        #endregion constructor
     }
 }

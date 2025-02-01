@@ -12,11 +12,9 @@ namespace CarRace.Logic
         #region fields
         private readonly Random _random = new();
         #endregion fields
-
         #region properties
         public int Dots { get; private set; }
         #endregion properties
-
         #region methods
         public void Roll()
         {
