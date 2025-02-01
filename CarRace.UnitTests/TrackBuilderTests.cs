@@ -35,5 +35,13 @@ public class TrackBuilderTests
         Assert.AreEqual(manuallyBuiltTrack.StartSection.NextSection.NextSection.MaxSpeed, builder.RaceTrack.StartSection.NextSection.NextSection.MaxSpeed);
 
     }
+    [TestMethod]
+    public void ItShouldConnectTheLastSegmentToTheFirst_GivenAnAdditionalParameterForALoopedTrack()
+    {
+        (int, int)[] sectionInfos = [(10, 10), (30, 30)];
 
+        TrackBuilder builder = new(sectionInfos, trackShallLoop: true);
+
+        Assert.AreEqual(true, builder.RaceTrack!.LoopedTrack);
+    }
 }
