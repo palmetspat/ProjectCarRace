@@ -51,4 +51,11 @@ public class TrackTest
         List<Section> sectionList = [];
         Track track = new(sectionList);
     }
+    [TestMethod]
+    [ExpectedException(typeof(ArgumentNullException), "Sections cant be empty")]
+    public void ItShouldThrowException_GivenNullSectionList()
+    {
+        List<Section>? sectionList = null;
+        Track track = new(sectionList);
+    }
 }
