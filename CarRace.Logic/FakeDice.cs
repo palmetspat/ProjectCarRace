@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace CarRace.Logic
 {
-    internal class FakeDice
+    public class FakeDice : IDice
     {
+        #region fields
+        public int Dots { get; set; }
+        public bool RollWasCalled { get; private set; } = false;
+        #endregion fields
+
+        #region methods
+        public void Roll()
+        {
+            RollWasCalled = true;
+        }
+        #endregion methods
     }
 }
